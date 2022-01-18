@@ -8,7 +8,7 @@ spec:
     namespace: argo-green
     server: "https://kubernetes.default.svc"
   source:
-    path: argocd/main-app/depl.yaml
+    path: argocd/main-app
     repoURL: "https://github.com/jilanisayyad/kube-tutorials"
     targetRevision: HEAD
   project: default
