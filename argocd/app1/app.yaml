@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: argo-green
+    namespace: default
     server: "https://kubernetes.default.svc"
   source:
     path: argocd/main-app
