@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: app-argocd
+  namespace: argo-green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-argocd
+  template:
+    metadata:
+      labels:
+        app: app-argocd
+    spec:
+      containers:
+        - name: name
+          image: jilanigns3/web-server:blue
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 100m
+              memory: 200Mi
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-argocd
+  namespace: argo-green
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort:
+  selector:
+    app: app-argocd

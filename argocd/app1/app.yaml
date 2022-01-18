@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: blue-server
+spec:
+  destination:
+    name: "blue-server"
+    namespace: argo-green
+    server: "https://kubernetes.default.svc"
+  source:
+    path: main-app
+    repoURL: "https://github.com/jilanisayyad/Kubernetes-Tutorial"
+    targetRevision: HEAD
+  project: Production
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
