@@ -8,6 +8,8 @@ spec:
   source:
     repoURL: https://github.com/jilanisayyad/kube-tutorials
     path: argocd/second-app/helm/
+    helm:
+      releaseName: second-app
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
