@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: name
-          image: jilanigns3/web-server:blue
+          image: jilanigns3/web-servers:blue
           imagePullPolicy: Always
           resources:
             requests:
