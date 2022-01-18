@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://json.schemastore.org/helmfile.json
+#
+apiVersion: v2
+name: Production-Chart for argocd
+description: Production-Chart for argocd
+version: 0.1.0

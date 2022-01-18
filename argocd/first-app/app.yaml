@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/jilanisayyad/kube-tutorials
-    path: argocd/main-app
+    path: argocd/first-app/app.yaml
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
