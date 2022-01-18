@@ -8,11 +8,11 @@ spec:
     namespace: argo-green
     server: "https://kubernetes.default.svc"
   source:
-    path: main-app
-    repoURL: "https://github.com/jilanisayyad/Kubernetes-Tutorial"
+    path: argocd/main-app
+    repoURL: "https://github.com/jilanisayyad/kube-tutorials"
     targetRevision: HEAD
-  project: Production
+  project: default
   syncPolicy:
     automated:
-      prune: false
-      selfHeal: false
+      prune: true
+      selfHeal: true
