@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "https://github.com/jilanisayyad/kube-tutorials"
+    repoURL: https://github.com/jilanisayyad/kube-tutorials
     path: argocd/main-app
     targetRevision: HEAD
   destination:
-    server: "https://kubernetes.default.svc"
+    server: https://kubernetes.default.svc
     namespace: argo-green
   syncPolicy:
     automated:
